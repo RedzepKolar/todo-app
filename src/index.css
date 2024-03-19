@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", sans-serif;
+
+  --button-color-primary: #666af6;
+  --button-color-secondary: #f5a921;
+  --button-color-danger: #dc3545;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 10vh;
+  background-color: #8a6ecf;
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-image {
+  background-image: url("/todo-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+}
+h3 {
+  margin: 0.2rem 0 0.2rem 0;
+}
+
+#user-input {
+  padding: 1rem;
+  max-width: 49rem;
+  margin: 2rem auto;
+  border-radius: 4px;
+  border: 1px solid white;
+  border-radius: 0.6rem;
+}
+
+#user-input input {
+  width: 100%;
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.user-input-group {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.user-todos-result {
+  margin-left: 1rem;
+}
+
+.user-todos-result p {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+
+.user-modal-edit-input input {
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: 1px solid white;
+  border-radius: 0.25rem;
+  margin: 0.1rem auto;
+  padding: 0.35rem;
+  align-items: center;
+  width: 70%;
+}
+
+input:focus {
+  outline: 1px solid rgb(190, 190, 190);
+}
+
+#user-todos-result-container {
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  border-spacing: 1rem;
+  border: 1px solid white;
+}
+
+.elevated-table {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+button {
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0.3rem;
+  width: 4.5rem;
+  height: 2rem;
+  /* color: #2d2d2d; */
+  background-color: transparent;
+}
+
+button:hover {
+  filter: brightness(92%);
+}
+
+/* Changing colors dynamically */
+.primary {
+  background-color: var(--button-color-primary);
+}
+
+.secondary {
+  background-color: var(--button-color-secondary);
+}
+
+.danger {
+  background-color: var(--button-color-danger);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.buttons {
+  margin-left: auto;
+}
+
+hr {
+  margin: 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+#text-center {
+  display: flex;
+  justify-content: center;
+}
+
+.crossed-out {
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+}
+
+.bottom-actions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: initial;
+  margin-top: 0.4rem;
+  pointer-events: none;
+}
+
+.center-button-container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.clear-button-container {
+  margin-right: 3rem;
+  white-space: nowrap;
+}
+
+.active-class:hover {
+  color: #666af6;
+}
+
+.btn-label-span {
+  pointer-events: auto;
+}
+
+.btn-label-span:hover,
+.btn-label-span.active {
+  color: var(--button-color-primary);
+}
+
+.modal {
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  width: 30%;
+  max-width: 40rem;
+  animation: fade-slide-up 0.3s ease-out forwards;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fade-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 830px) {
+  #user-todos-result-container,
+  #user-input {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
