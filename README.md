@@ -1,8 +1,19 @@
-# React + Vite
+# React & Vite To-Do App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **basic To-Do application** built with the robustness of **React** and the speed of **Vite**. 
+It's designed to offer a straightforward and efficient way to manage your daily tasks.
 
-Currently, two official plugins are available:
+## Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Fast Loading**: Powered by Vite, the app boasts incredibly fast loading times, making your task management seamless and efficient.
+**React Ecosystem**: Utilizes the latest React features for state-of-the-art user experience.
+**State Management**: Integrated with **Redux Toolkit** for predictable state management, making the app scalable and maintainable.
+
+## Getting Started
+
+To run this project locally, follow these steps:
+
+1. Clone this repository to your local machine.
+2. Navigate to the project directory in your terminal.
+3. Run `npm install` to install the project dependencies.
+4. After installation, run `npm run dev` to start the development server.
